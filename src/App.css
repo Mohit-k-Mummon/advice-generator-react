@@ -127,6 +127,7 @@ img, picture, video, canvas, svg {
     position: absolute;
     background-color: var(--Neon-Green);
     border: none;
+    outline: none;
     padding: 2rem;
     border-radius: 50%;
     left: 50%;
