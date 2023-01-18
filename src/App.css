@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/****************
+    VARIABLES
+*****************/
+:root {
+    /* COLORS */
+        /* PRIMARY COLORS */
+        --Light-Cyan: hsl(193, 38%, 86%);
+        --Neon-Green: rgb(82, 255, 168);
+
+        /* NEUTRAL COLORS */
+        --Grayish-Blue: hsl(217, 19%, 38%);
+        --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+        --Dark-Blue: #1f2632;
+}
+
+
+
+
+/****************
+    MAIN
+*****************/
+html {
+    font-size: 62.5%;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--Dark-Blue);
+    padding: 10rem 1.6rem 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        padding: 22rem 1.6rem 1.6rem;
+    }
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+
+
+
+  
+/****************
+    ADVICE
+*****************/
+.advice__container {
+    background-color: var(--Dark-Grayish-Blue);
+    text-align: center;
+    border-radius: 10px;
+    min-height: 31.5rem;
+    max-width: 34.3rem;
+    height: min-content;
+    padding: 1rem 2.5rem 5rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/* Heading */
+.advice__container .heading {
+    color: var(--Neon-Green);
+    font-size: 1.1rem;
+    letter-spacing: 3.46px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 3rem;
+}
+
+
+
+/* Quote */
+.advice__container .quote {
+    color: var(--Light-Cyan);
+    font-size: 2.4rem;
+    font-weight: 700;
+    letter-spacing: -0.26px;
+    margin-top: 2.2rem;
+}
+
+.quote::before, .quote::after {
+    content: '"';
+}
+
+
+/* Divider */
+.divider-container {
+    margin-top: 2.5rem;
+}
+
+.divider-container img {
+    margin: 0 auto;
+    
+}
+
+
+
+/* Button */
+.advice__container .button {
+    position: absolute;
+    background-color: var(--Neon-Green);
+    border: none;
+    padding: 2rem;
+    border-radius: 50%;
+    left: 50%;
+    bottom: -6.5rem;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+.advice__container .button:hover {
+    box-shadow: 0px 0px 30px 10px rgba(82, 255, 168, 0.4);
+}
+
+
+
+/* Button Image */
+.advice__container .button svg {
+    transform: rotate(0deg) scale(1);
+    transition: all 0.3s;
+}
+
+.advice__container .button:hover svg {
+    transform: rotate(180deg) scale(1.1);
+}
+
+@media screen and (min-width: 768px) {
+    .advice__container {
+        max-width: 54rem;
+        min-height: 33.2rem;
+    }
+
+    .advice__container .heading {
+        font-size: 1.3rem;
+        margin-top: 3.8rem;
+    }
+    .advice__container .quote {
+        font-size: 2.8rem;
+        margin-top: 2.4rem;
+    }
+
+    .divider-container {
+        margin-top: 4rem;
+    }
+}
